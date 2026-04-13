@@ -18,9 +18,25 @@ int main(){
     n= n/10;
 
   }
-cout<< sign<<endl;
+ cout << reversed * sign << endl;
 
 
 
   return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
