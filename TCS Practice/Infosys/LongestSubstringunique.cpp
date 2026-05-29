@@ -1,53 +1,103 @@
-// // Longest Substring without Repeating Characters
-#include<bits/stdc++.h>
+// // // Longest Substring without Repeating Characters
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+
+//     string s;
+//     cin >> s;
+
+//     unordered_set<char> st;
+
+//     int left = 0;
+
+//     int maxLen = 0;
+
+//     // right pointer expands window
+//     for(int right = 0; right < s.size(); right++){
+
+//         // duplicate found
+//         while(st.count(s[right])){
+
+//             // remove left character
+//             st.erase(s[left]);
+
+//             left++;
+//         }
+
+//         // add current character
+//         st.insert(s[right]);
+
+//         // window length
+//         int len = right - left + 1;
+
+//         maxLen = max(maxLen, len);
+//     }
+
+//     cout << maxLen;
+
+//     return 0;
+// }
+
+
+// // //output  if string is : abaabad  then output is 3 abd, bad in this string not repeating sub string. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-
     string s;
-    cin >> s;
-
-    unordered_set<char> st;
-
+    getline(cin , s);
+    
     int left = 0;
-
-    int maxLen = 0;
-
-    // right pointer expands window
-    for(int right = 0; right < s.size(); right++){
-
-        // duplicate found
+    int maxlen = 0;
+    int startIdx = 0; // Tracks the start of the longest substring
+ 
+    unordered_set<char> st;
+ 
+    for(int right=0; right < s.size(); right++){
         while(st.count(s[right])){
-
-            // remove left character
             st.erase(s[left]);
-
             left++;
         }
-
-        // add current character
         st.insert(s[right]);
-
-        // window length
+     
         int len = right - left + 1;
-
-        maxLen = max(maxLen, len);
+        
+        // Keeps your exact required format
+        maxlen = max(maxlen, len); 
+        
+        // If the current window matches the updated maxlen, record its start
+        if (len == maxlen) {
+            startIdx = left;
+        }
     }
-
-    cout << maxLen;
-
+ 
+    // Extract the longest substring
+    string result = s.substr(startIdx, maxlen);
+ 
+    cout << maxlen << "  " << result << endl;
+    
     return 0;
 }
-
-
-// //output  if string is : abaabad  then output is 3 abd, bad in this string not repeating sub string. 
-
-
-
-
-
-
-
 
 
 
