@@ -256,7 +256,7 @@ int main(){
         cin >> arr[i];
     }
     
-sort (arr, arr+ n);
+sort (arr, arr+ n);      // why arr + n because  arr + n = last element address . and first value means arr[0] and last value means arr[n-1] then why arr + n ? because arr + n is the address of the element after the last element.  sort(arr, arr + n) means sort the array from the first element to the last element.  if we write sort(arr, arr + n - 1) then it will sort the array from the first element to the second last element.  if we write sort(arr, arr + n + 1) then it will sort the array from the first element to the element after the last element which is not exist. so we should write sort(arr, arr + n) to sort the whole array.
 int k; cin >> k;
 
 cout << "Sorted : ";

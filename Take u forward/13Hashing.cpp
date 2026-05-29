@@ -1,5 +1,4 @@
 // #include<bits/stdc++.h>
-
 // using namespace std;
 
 // int main(){
@@ -35,7 +34,6 @@
 
 
 // #include<bits/stdc++.h>
-
 // using namespace std;
 
 
@@ -43,8 +41,6 @@
 //     string s; 
 //     cin >> s;
     
-
-
 // int hash[256] = {0};
 // for(int i=0; i<s.size(); i++){
 //     hash[s[i]- 'a']++;
@@ -70,6 +66,27 @@
 
 
 
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+
+
+// int main(){
+//     string s; 
+//     cin >> s;
+
+//     map<char, int> mp;
+//     for(char ch : s){
+//         mp[ch]++;
+//     }
+
+
+//     for (auto it : mp){
+//         cout << it.first << "->" << it.second << endl;
+//     }
+//     return 0;
+// }
 
 
 
@@ -139,6 +156,43 @@
 
 
 
+// #include<bits/stdc++.h>
+// using namespace std;
+
+
+// int main(){
+//     int n;
+//     cin >> n;
+
+//     int arr[n];
+//     map<int, int> mp;
+//     for(int i=0; i<n; i++){
+//         cin >> arr[i];
+//         mp[arr[i]]++;
+//     }
+
+//     for(auto it : mp){
+//         cout << it.first << "->" << it.second << endl;
+//     }
+     
+//     return 0;
+// }
+
+
+
+/// in map time complexity is O(log n) in all cases. storing and fetching  and in unordered map time complexity is O(1) but in worst case it can be O(n) if there is a collision.
+    
+
+
+
+
+
+
+
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -146,23 +200,20 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-
-    int arr[n];
-    map<int, int> mp;
+    int k = 9;
+    vector<int> arr(n);
     for(int i=0; i<n; i++){
         cin >> arr[i];
-        mp[arr[i]]++;
     }
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(arr[i] + arr[j] == k){
+                cout << arr[i] << " " << arr[j] << endl;
 
-    for(auto it : mp){
-        cout << it.first << "->" << it.second << endl;
+            }
+        }
     }
-     
-    return 0;
-}
-
-
-
-/// in map time complexity is O(log n) in all cases. storing and fetching  and in unordered map time complexity is O(1) but in worst case it can be O(n) if there is a collision.
     
+  return 0;
+}
 

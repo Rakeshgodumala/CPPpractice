@@ -52,15 +52,15 @@
 
 //   // ***************check if a string is palindrome or not************
 
-// //   string abc = str;
-// //       reverse(abc.begin(), abc.end());
-// //   if(abc == str){
+//   string abc = str;
+//       reverse(abc.begin(), abc.end());
+//   if(abc == str){
 
-// //     cout << "Palindrome" << endl;
-// //   }
-// //   else{
-// //     cout << "Not Palindrome" << endl;
-// //   }
+//     cout << "Palindrome" << endl;
+//   }
+//   else{
+//     cout << "Not Palindrome" << endl;
+//   }
 
 
 
@@ -89,25 +89,25 @@
 // *************8CHECK PALINDRONE OR NOT*******
  
 
-#include <bits/stdc++.h>
-using namespace std;
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int countWord(string str){
-    int count = 0;
-   for(int i=0; i<str.size(); i++){
-       if(str[i] == ' '){
-           count++;
-       }
-   }
-   return count+1;
+// int countWord(string str){
+//     int count = 0;
+//    for(int i=0; i<str.size(); i++){
+//        if(str[i] == ' '){
+//            count++;
+//        }
+//    }
+//    return count+1;
     
-}
-int main(){
+// }
+// int main(){
     
-    string str;
-    getline(cin , str);
+//     string str;
+//     getline(cin , str);
     
-    cout << countWord(str);
+//     cout << countWord(str);
     
-    return 0;
-}
+//     return 0;
+// }
