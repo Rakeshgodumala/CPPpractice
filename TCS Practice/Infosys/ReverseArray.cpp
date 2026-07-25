@@ -96,25 +96,25 @@
 //************** */ Reverse a string *************************//
 
 
-// #include <iostream>
-// #include <stack>
-// using namespace std;
+#include <iostream>
+#include <stack>
+using namespace std;
 
 
-// int main(){
-// string s = "Hello";
-// stack<char>st;
+int main(){
+string s = "hello";
+stack<char>st;
 
-// for(char ch : s){
-//     st.push(ch);
-// }
-// while(!st.empty()){
-//    cout <<  st.top();
-//     st.pop();
-// }
+for(char ch : s){
+    st.push(ch);
+}
+while(!st.empty()){
+   cout <<  st.top();
+    st.pop();
+}
 
-//     return 0;
-// } 
+    return 0;
+} 
 
 
 
@@ -175,6 +175,51 @@
 // } 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// #include <utility> // Required for std::swap
+
+// using namespace std;
+
+// int main() {
+//     // Vector of strings
+//     vector<string> s = {"abc", "pqr", "xyz"};
+    
+//     int start = 0;
+//     int end = s.size() - 1;
+    
+//     // Two-pointer approach
+//     while(start < end) {
+//         // Efficiently swaps internal memory pointers, NOT characters
+//         swap(s[start], s[end]); 
+        
+//         start++;
+//         end--;
+//     }
+    
+//     // Print the reversed array
+//     for(int i = 0; i < s.size(); i++) {
+//         cout << s[i] << " ";
+//     }
+    
+//     return 0;
+// }
 
 
 

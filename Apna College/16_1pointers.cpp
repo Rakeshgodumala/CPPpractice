@@ -8,9 +8,9 @@ using namespace std;
 
 
 
-// void change(int* ptr){
-//   *ptr = 101;
-// }
+void change(int* ptr){
+  *ptr = 101;
+}
 
 int main(){
 
@@ -21,10 +21,10 @@ int main(){
 
 
 
-  // int x = 50;
+  int x = 50;
   // // int* ptr = &x;
 
-  // change(&x);
+  change(&x);
   
   cout << x;
 

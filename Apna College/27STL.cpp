@@ -376,7 +376,7 @@ int main(){
 // *********** priority_queue ***************
 
 // priority_queue<int> pq;
-priority_queue<int, vector<int>, greater<int>> pq;
+priority_queue<int, vector<int>, greater<int>m> pq;
 pq.push(8);
 pq.push(19);
 pq.push(-3);
